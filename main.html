@@ -1,18 +1,39 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <title>Increment Counter</title>
 </head>
 
 <body>
-	<p id= "counter">0</p>
-	<button id = "incrementBtn">Increment</button>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+
+    <!-- Counter Paragraph -->
+    <p id="counter">0</p>
+
+    <!-- Button -->
+    <button id="incrementBtn">Increment</button>
+
+    <script>
+
+        let counter = document.getElementById("counter");
+        let button = document.getElementById("incrementBtn");
+
+        button.addEventListener("click", function(){
+
+            // current value
+            let value = Number(counter.innerText);
+
+            // alert un-incremented value
+            alert(value);
+
+            // increment value
+            value++;
+
+            // update UI
+            counter.innerText = value;
+
+        });
+
+    </script>
 
 </body>
-
 </html>
